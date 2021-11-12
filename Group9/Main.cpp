@@ -242,18 +242,31 @@ void pavement()
 	glBegin(GL_POLYGON);
 	glColor3f(0.957, 0.643, 0.376);
 
-	glVertex2d(-300, -175);
-	glVertex2d(-300, -205);
-	glVertex2d(300, -205);
-	glVertex2d(300, -175);
+	glVertex2d(-300, -155);
+	glVertex2d(-300, -185);
+	glVertex2d(300, -185);
+	glVertex2d(300, -155);
 	glEnd();
+
 	glBegin(GL_LINES);
 	glColor3f(0, 0, 0);
-	glVertex2d(-300, -195);
-	glVertex2d(300, -195);
+	glVertex2d(-300, -155);
+	glVertex2d(300, -155);
+	glEnd();
+
+	glBegin(GL_LINES);
+	glColor3f(0, 0, 0);
+	glVertex2d(-300, -165);
+	glVertex2d(300, -165);
 	glEnd();
 
 
+
+	glBegin(GL_LINES);
+	glColor3f(0, 0, 0);
+	glVertex2d(-300, -175);
+	glVertex2d(300, -175);
+	glEnd();
 
 	glBegin(GL_LINES);
 	glColor3f(0, 0, 0);
@@ -261,18 +274,12 @@ void pavement()
 	glVertex2d(300, -185);
 	glEnd();
 
-	glBegin(GL_LINES);
-	glColor3f(0, 0, 0);
-	glVertex2d(-300, -175);
-	glVertex2d(300, -175);
-	glEnd();
-
 	for (int i = -300; i<300; i = i + 12)
 	{
 		glBegin(GL_LINES);
 		glColor3f(0, 0, 0);
-		glVertex2d(i, -185);
-		glVertex2d(i, -195);
+		glVertex2d(i, -165);
+		glVertex2d(i, -175);
 		glEnd();
 	}
 
@@ -289,13 +296,13 @@ void road()
 	glColor3f(0.3, 0.3, 0.3);
 	//Anti clockwise (front-side) top (2nd Quad), Left (3rd Quad) ,bottom (4th Quad) ,right (1st Quad)
 	//glVertex2d(-250, 250);
-	glVertex2d(-300, -205);
+	glVertex2d(-300, -195);
 	//glVertex2d(-250, -250);
 	glVertex2d(-300, -300);
 	//glVertex2d(250,-250);
 	glVertex2d(300, -300);
 	//glVertex2d(250, 250);
-	glVertex2d(300, -205);
+	glVertex2d(300, -195);
 
 	glEnd();
 
@@ -429,29 +436,55 @@ void road()
 }
 void fence() {
 	glBegin(GL_QUADS);
+	glColor3f(0.941, 0.973, 1.000);
+
 	glVertex2d(-300,-80);
+
 	glVertex2d(-300, -150);
 	glVertex2d(-200, -150);
 	glVertex2d(-200, -80);
 	glEnd();
 
+	//shadow
+	glBegin(GL_QUADS);
+	glColor3f(0, 0, 0);
+
+	glVertex2d(-300, -70);
+
+	glVertex2d(-300, -80);
+	glVertex2d(-200, -80);
+	glVertex2d(-200, -70);
+	glEnd();
+
 	glBegin(GL_LINE);
 	glColor3f(0, 0, 0);
-	glVertex2d(-200, -150);
 	glVertex2d(-200, -80);
+	glVertex2d(-200, -70);
 	glEnd();
 
 	glBegin(GL_QUADS);
-	glColor3f(0, 0, 0);
+	glColor3f(0.941, 0.973, 1.000);
+
 	glVertex2d(-200, -80);
 	glVertex2d(-200, -150);
 	glVertex2d(-150, -110);
 	glVertex2d(-150, -40);
 
 	glEnd();
+
+	//shadow
+	glBegin(GL_QUADS);
+	glColor3f(0, 0, 0);
+
+	glVertex2d(-200, -70);
+	glVertex2d(-200, -80);
+	glVertex2d(-150, -40);
+	glVertex2d(-163, -40);
+	glEnd();
 	// small wall
 	glBegin(GL_POLYGON);
-	glColor3f(0, 0, 0);
+	glColor3f(0.941, 0.973, 1.000);
+
 	glVertex2d(-150, -75);
 	glVertex2d(-150, -110);
 	glVertex2d(-125, -110);
@@ -460,22 +493,34 @@ void fence() {
 	glEnd();
 
 	glBegin(GL_POLYGON);
-	glColor3f(0, 0, 0);
+	glColor3f(0.941, 0.973, 1.000);
+
 	glVertex2d(-125, -40);
 	glVertex2d(-125, -110);
 	glVertex2d(-110, -110);
 	glVertex2d(-110, -40);
 
 	glEnd();
-	//Gate
-	glBegin(GL_LINE_STRIP);
-	glColor3f(0, 0, 0);
-	glVertex2d(-20, -110);
-	glVertex2d(-20, -40);
-	glVertex2d(20, -40);
-	glVertex2d(20, -110);
+
+	//shadow
+	glBegin(GL_POLYGON);
+	glColor3f(0,0,0);
+	
+	glVertex2d(-130, -45);
+	glVertex2d(-130, -75);
+	glVertex2d(-125, -75);
+	glVertex2d(-125, -40);
 
 	glEnd();
+	//Gate
+	//glBegin(GL_LINE_STRIP);
+	//glColor3f(0, 0, 0);
+	//glVertex2d(-20, -110);
+	//glVertex2d(-20, -40);
+	//glVertex2d(20, -40);
+	//glVertex2d(20, -110);
+
+	//glEnd();
 	glBegin(GL_LINE);
 	glColor3f(0, 0, 0);
 	glVertex2d(-20, -40);
@@ -484,7 +529,8 @@ void fence() {
 	glEnd();
 
 	glBegin(GL_POLYGON);
-	glColor3f(0, 0, 0);
+	glColor3f(0.941, 0.973, 1.000);
+
 	glVertex2d(20, -40);
 	glVertex2d(20, -110);
 	glVertex2d(35, -110);
@@ -494,7 +540,8 @@ void fence() {
 
 	// small wall
 	glBegin(GL_POLYGON);
-	glColor3f(0, 0, 0);
+	glColor3f(0.941, 0.973, 1.000);
+
 	glVertex2d(35, -75);
 	glVertex2d(35, -110);
 	glVertex2d(60, -110);
@@ -503,6 +550,8 @@ void fence() {
 	glEnd();
 
 	glBegin(GL_QUADS);
+	glColor3f(0.941, 0.973, 1.000);
+
 	glVertex2d(60, -40);
 	glVertex2d(60, -110);
 	glVertex2d(100, -150);
@@ -510,6 +559,8 @@ void fence() {
 	glEnd();
 
 	glBegin(GL_QUADS);
+	glColor3f(0.941, 0.973, 1.000);
+
 	glVertex2d(300, -80);
 	glVertex2d(300, -150);
 	glVertex2d(100, -150);
@@ -517,22 +568,22 @@ void fence() {
 	glEnd();
 }
 
-//Steps/ Stairs
+//Stairs
 void steps() {
 	glBegin(GL_POLYGON);
 	glColor3f(0, 0, 0);
 	glVertex2d(- 90, -60);
 	glVertex2d(-90, -75);
-	glVertex2d(20, -75);
-	glVertex2d(20, -60);
+	glVertex2d(0, -75);
+	glVertex2d(0, -60);
 	glEnd();
 
 	glBegin(GL_POLYGON);
 	glColor3f(1, 1, 1);
 	glVertex2d(-70, -45);
 	glVertex2d(-70, -60);
-	glVertex2d(20, -60);
-	glVertex2d(20, -45);
+	glVertex2d(10, -60);
+	glVertex2d(10, -45);
 	glEnd();
 
 	glBegin(GL_POLYGON);
@@ -555,7 +606,7 @@ void steps() {
 //Main building 
 void building() {
 	glBegin(GL_POLYGON);
-	glColor3f(0.482, 0.408, 0.933);
+	glColor3f(0.722, 0.525, 0.043);
 	glVertex2d(-60, 100);
 	glVertex2d(-60, -10);
 	glVertex2d(50, -10);
@@ -571,7 +622,7 @@ void building() {
 	glEnd();
 
 	glBegin(GL_POLYGON);
-	glColor3f(0.482, 0.408, 0.933);
+	glColor3f(0.722, 0.525, 0.043);
 	glVertex2d(-60, 130);
 	glVertex2d(-60, 105);
 	glVertex2d(50, 105);
@@ -584,7 +635,231 @@ void building() {
 	glVertex2d(-70, 130);
 	glVertex2d(60, 130);
 	glEnd();
+
+
+	//inner house
+	glBegin(GL_POLYGON);
+	glColor3f(0,0,0);
+	glVertex2d(-20, 50);
+	glVertex2d(-20, -10);
+	glVertex2d(10, -10);
+	glVertex2d(10, 50);
+	glEnd();
+
+	glBegin(GL_TRIANGLES);
+	glColor3f(0, 0, 0);
+	glVertex2d(-5, 65);
+	glVertex2d(-25, 50);
+	glVertex2d(15, 50);
+	glEnd();
+	//windows
+	glBegin(GL_POLYGON);
+	glColor3f(0, 0, 0);
+	glVertex2d(-50, 50);
+	glVertex2d(-50, 15);
+	glVertex2d(-30, 15);
+	glVertex2d(-30, 50);
+	glEnd();
+
+	glBegin(GL_POLYGON);
+	glColor3f(0, 0, 0);
+	glVertex2d(-50, 90);
+	glVertex2d(-50, 60);
+	glVertex2d(-30, 60);
+	glVertex2d(-30, 90);
+	glEnd();
+
+
+	glBegin(GL_POLYGON);
+	glColor3f(0, 0, 0);
+	glVertex2d(40, 90);
+	glVertex2d(40, 60);
+	glVertex2d(20, 60);
+	glVertex2d(20, 90);
+	glEnd();
+
+
+	glBegin(GL_POLYGON);
+	glColor3f(0, 0, 0);
+	glVertex2d(40, 50);
+	glVertex2d(40, 15);
+	glVertex2d(20, 15);
+	glVertex2d(20, 50);
+	glEnd();
 }
+void hall()
+{
+	glBegin(GL_POLYGON);
+	glColor3f(0.722, 0.525, 0.043);
+	glVertex2d(-150, 100);
+	glVertex2d(-150, -10);
+	glVertex2d(-120, -10);
+	glVertex2d(-120, 100);
+	glEnd();
+}
+void lectureRoom()
+{
+	glBegin(GL_POLYGON);
+	glColor3f(0, 0, 0);
+	glVertex2d(145, 73);
+	glVertex2d(145, -65);
+	glVertex2d(155, -65);
+	glVertex2d(155, 85);
+	glEnd();
+	//glShadeModel(GL_FLAT);
+	glBegin(GL_POLYGON);
+	glColor3f(0.722, 0.525, 0.043);
+	glVertex2d(155, 85);
+	glVertex2d(155, -65);
+	glVertex2d(200, -65);
+	glVertex2d(200, 85);
+	glEnd();
+
+	glBegin(GL_POLYGON);
+	glColor3f(0.941, 0.973, 1.000);
+	glVertex2d(200, 85);
+	glVertex2d(200, -65);
+	glVertex2d(245, -65);
+	glVertex2d(245, 85);
+	glEnd();
+
+	glBegin(GL_POLYGON);
+	glColor3f(0.255, 0.412, 0.882);
+	glVertex2d(245, 85);
+	glVertex2d(245, -65);
+	glVertex2d(290, -65);
+	glVertex2d(290, 85);
+	glEnd();
+
+	//windows
+	glBegin(GL_QUADS);
+	glColor3f(0, 0, 0);
+	glVertex2d(165, 65);
+	glVertex2d(165, 35);
+	glVertex2d(185, 35);
+	glVertex2d(185, 65);
+	glEnd();
+
+	glBegin(GL_QUADS);
+	glColor3f(0, 0, 0);
+	glVertex2d(165, 25);
+	glVertex2d(165, -5);
+	glVertex2d(185, -5);
+	glVertex2d(185, 25);
+	glEnd();
+
+	glBegin(GL_QUADS);
+	glColor3f(0, 0, 0);
+	glVertex2d(165, -15);
+	glVertex2d(165, -42);
+	glVertex2d(185, -42);
+	glVertex2d(185, -15);
+	glEnd();
+
+	//second set of windows
+	glBegin(GL_POLYGON);
+	glColor3f(0, 0, 0);
+	glVertex2d(210, 65);
+	glVertex2d(210, 35);
+	glVertex2d(230, 35);
+	glVertex2d(230, 65);
+	glEnd();
+
+	glBegin(GL_POLYGON);
+	glColor3f(0, 0, 0);
+	glVertex2d(210, 25);
+	glVertex2d(210, -5);
+	glVertex2d(230, -5);
+	glVertex2d(230, 25);
+	glEnd();
+
+	glBegin(GL_POLYGON);
+	glColor3f(0, 0, 0);
+	glVertex2d(210, -15);
+	glVertex2d(210, -42);
+	glVertex2d(230, -42);
+	glVertex2d(230, -15);
+	glEnd();
+
+	//Last set of windows
+
+	glBegin(GL_POLYGON);
+	glColor3f(0, 0, 0);
+	glVertex2d(255, 65);
+	glVertex2d(255, 35);
+	glVertex2d(275, 35);
+	glVertex2d(275, 65);
+	glEnd();
+
+	glBegin(GL_POLYGON);
+	glColor3f(0, 0, 0);
+	glVertex2d(255, 25);
+	glVertex2d(255, -5);
+	glVertex2d(275, -5);
+	glVertex2d(275, 25);
+	glEnd();
+
+	glBegin(GL_POLYGON);
+	glColor3f(0, 0, 0);
+	glVertex2d(255, -15);
+	glVertex2d(255, -42);
+	glVertex2d(275, -42);
+	glVertex2d(275, -15);
+	glEnd();
+}
+void busmake()
+{
+	glColor3f(0.9, 0.72, 0.0);
+	rectangle(-60, -15, 0, 15);
+	rectangle(-80, -15, -60, 25);
+	glColor3f(0, 0, 0);
+	rectangle(-60, 15, -2, 50);
+	rectangle(-70, 25, -60, 50);
+	glColor3f(0.76, 0.84, 0.84);
+	rectangle1(-2, 50, -70, 50, -7, 55, -76, 55);
+
+	glColor3f(0.2, 0.8, 1.0);
+	rectangle1(-70, 25, -74, 25, -70, 50, -76, 55);
+
+	glColor3f(1, 1, 1.0);
+	rectangle(-58, 0, -50, 35);
+	glColor3f(0.2, 0.8, 1.0);
+	rectangle(-45, 30, -40, 40);
+	rectangle(-35, 30, -30, 40);
+	rectangle(-25, 30, -20, 40);
+	rectangle(-15, 30, -10, 40);
+
+
+	glColor3f(0.9, 0.72, 0.0);
+	circle(3, 15, 0, 0);
+	circle(3, 20, -80, 5);
+
+	glColor3f(0, 0, 0);
+	circle(8, 16, -10, -15);
+	circle(8, 16, -70, -15);
+
+	glColor3f(1, 1, 1);
+	circle(6, 12, -10, -15);
+	circle(6, 12, -70, -15);
+
+}
+
+void busMove() {
+	bm = bm - .4;
+	if (bm<-350)
+		bm = 350;
+
+	glutPostRedisplay();
+}
+//Press "s" to move and "b" to stop
+void bus()
+{
+	glPushMatrix();
+	glTranslatef(bm, -165, 0);
+	busmake();
+	glPopMatrix();
+}
+
 //Callback function
 void display()
 {
@@ -601,10 +876,11 @@ void display()
 	tree1();
 	tree2();
 	building();
+	lectureRoom();
 	steps();
 	fence();
 	pavement();
-
+	bus();
 	road();
 	//Display frame buffer
 	glutSwapBuffers();
@@ -621,6 +897,53 @@ void reshape(int w, int h)
 	glLoadIdentity();
 	glOrtho(-300, 300, -300, 300, -150, 500);
 	glMatrixMode(GL_MODELVIEW);
+}
+void my_keyboard(unsigned char key, int x, int y)
+{
+
+	switch (key) {
+
+	case 's':
+		glutIdleFunc(busMove);
+		break;
+	case 'b':
+		glutIdleFunc(NULL);
+		break;
+
+	default:
+		break;
+	}
+}
+void spe_key(int key, int x, int y)
+{
+
+	switch (key) {
+
+	case GLUT_KEY_UP:
+		ty += 5;
+		glutPostRedisplay();
+		break;
+
+	case GLUT_KEY_DOWN:
+
+		ty -= 5;
+		glutPostRedisplay();
+		break;
+
+	case GLUT_KEY_RIGHT:
+		tx += 5;
+		glutPostRedisplay();
+		break;
+	case GLUT_KEY_LEFT:
+		tx -= 5;
+		glutPostRedisplay();
+		break;
+
+
+
+	default:
+		break;
+	}
 }
 void init()
 {
@@ -651,6 +974,8 @@ int main(int argc, char **argv) {
 	//Display Callback function every time we render the display/ draw a frame
 	glutDisplayFunc(display);
 	glutIdleFunc(display);
+	glutSpecialFunc(spe_key);
+	glutKeyboardFunc(my_keyboard);
 	//Any the window changes size
 	//Viewport initialization
 	glutReshapeFunc(reshape);

@@ -1,4 +1,4 @@
-﻿Build started 11/11/2021 8:53:44 PM.
+﻿Build started 11/12/2021 10:26:38 PM.
      1>Project "C:\Users\ad\Documents\Visual Studio 2015\Projects\Computer Graphics - Opengl\Group9\Group9\Group9.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
          C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\" /Fd"Debug\vc140.pdb" /Gd /TP /analyze- /errorReport:prompt Main.cpp
@@ -18,11 +18,29 @@
      1>c:\users\ad\documents\visual studio 2015\projects\computer graphics - opengl\group9\group9\main.cpp(142): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
      1>c:\users\ad\documents\visual studio 2015\projects\computer graphics - opengl\group9\group9\main.cpp(205): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
      1>c:\users\ad\documents\visual studio 2015\projects\computer graphics - opengl\group9\group9\main.cpp(243): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-     1>c:\users\ad\documents\visual studio 2015\projects\computer graphics - opengl\group9\group9\main.cpp(289): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-     1>c:\users\ad\documents\visual studio 2015\projects\computer graphics - opengl\group9\group9\main.cpp(558): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-     1>c:\users\ad\documents\visual studio 2015\projects\computer graphics - opengl\group9\group9\main.cpp(574): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-     1>c:\users\ad\documents\visual studio 2015\projects\computer graphics - opengl\group9\group9\main.cpp(582): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-     1>c:\users\ad\documents\visual studio 2015\projects\computer graphics - opengl\group9\group9\main.cpp(629): warning C4305: 'argument': truncation from 'double' to 'GLclampf'
+     1>c:\users\ad\documents\visual studio 2015\projects\computer graphics - opengl\group9\group9\main.cpp(296): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+     1>c:\users\ad\documents\visual studio 2015\projects\computer graphics - opengl\group9\group9\main.cpp(439): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+     1>c:\users\ad\documents\visual studio 2015\projects\computer graphics - opengl\group9\group9\main.cpp(466): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+     1>c:\users\ad\documents\visual studio 2015\projects\computer graphics - opengl\group9\group9\main.cpp(486): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+     1>c:\users\ad\documents\visual studio 2015\projects\computer graphics - opengl\group9\group9\main.cpp(496): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+     1>c:\users\ad\documents\visual studio 2015\projects\computer graphics - opengl\group9\group9\main.cpp(532): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+     1>c:\users\ad\documents\visual studio 2015\projects\computer graphics - opengl\group9\group9\main.cpp(543): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+     1>c:\users\ad\documents\visual studio 2015\projects\computer graphics - opengl\group9\group9\main.cpp(553): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+     1>c:\users\ad\documents\visual studio 2015\projects\computer graphics - opengl\group9\group9\main.cpp(562): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+     1>c:\users\ad\documents\visual studio 2015\projects\computer graphics - opengl\group9\group9\main.cpp(609): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+     1>c:\users\ad\documents\visual studio 2015\projects\computer graphics - opengl\group9\group9\main.cpp(625): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+     1>c:\users\ad\documents\visual studio 2015\projects\computer graphics - opengl\group9\group9\main.cpp(633): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+     1>c:\users\ad\documents\visual studio 2015\projects\computer graphics - opengl\group9\group9\main.cpp(693): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+     1>c:\users\ad\documents\visual studio 2015\projects\computer graphics - opengl\group9\group9\main.cpp(711): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+     1>c:\users\ad\documents\visual studio 2015\projects\computer graphics - opengl\group9\group9\main.cpp(719): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+     1>c:\users\ad\documents\visual studio 2015\projects\computer graphics - opengl\group9\group9\main.cpp(727): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+     1>c:\users\ad\documents\visual studio 2015\projects\computer graphics - opengl\group9\group9\main.cpp(812): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+     1>c:\users\ad\documents\visual studio 2015\projects\computer graphics - opengl\group9\group9\main.cpp(818): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+     1>c:\users\ad\documents\visual studio 2015\projects\computer graphics - opengl\group9\group9\main.cpp(821): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+     1>c:\users\ad\documents\visual studio 2015\projects\computer graphics - opengl\group9\group9\main.cpp(826): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+     1>c:\users\ad\documents\visual studio 2015\projects\computer graphics - opengl\group9\group9\main.cpp(833): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+     1>c:\users\ad\documents\visual studio 2015\projects\computer graphics - opengl\group9\group9\main.cpp(848): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+     1>c:\users\ad\documents\visual studio 2015\projects\computer graphics - opengl\group9\group9\main.cpp(952): warning C4305: 'argument': truncation from 'double' to 'GLclampf'
        Link:
          C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\ad\Documents\Visual Studio 2015\Projects\Computer Graphics - Opengl\Group9\Debug\Group9.exe" /INCREMENTAL /NOLOGO freeglut.lib glew32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /Debug /PDB:"C:\Users\ad\Documents\Visual Studio 2015\Projects\Computer Graphics - Opengl\Group9\Debug\Group9.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\ad\Documents\Visual Studio 2015\Projects\Computer Graphics - Opengl\Group9\Debug\Group9.lib" /MACHINE:X86 Debug\Main.obj
          Group9.vcxproj -> C:\Users\ad\Documents\Visual Studio 2015\Projects\Computer Graphics - Opengl\Group9\Debug\Group9.exe
@@ -30,4 +48,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:02.43
+Time Elapsed 00:00:04.21
