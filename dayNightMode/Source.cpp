@@ -47,7 +47,7 @@ double buildingUnitColor2[3] = { 248,248,255 };
 double buildingUnitColor3[3] = { 65,105,225 };
 double grassColor[3] = { 34,139,34 };
 double tankColor[3] = { 139,69,9 };
-
+double bulbColor[3] = { 255,255,255 };
 
 bool night = false;
 bool sunrise = false;
@@ -150,176 +150,6 @@ void rectangle1(int x1, int y1, int x2, int y2, int x3, int y3, int x4, int y4)
 	glVertex2d(x4, y4);
 	glVertex2d(x2, y2);
 	glEnd();
-}
-void drawRain()
-{
-	for (int i = 0; i < 100; i++)
-	{
-		glBegin(GL_LINES);
-		glColor3f(1, 1, 1);
-		glVertex3f(rainX, -0.1, 0);
-		glVertex3f(rainX, -0.2, 0);
-		glEnd();
-		rainX += 0.1;
-	}
-
-	rainX = -6;
-
-	for (int i = 0; i < 100; i++)
-	{
-		glBegin(GL_LINES);
-		glColor3f(1, 1, 1);
-		glVertex3f(rainX, -0.4, 0);
-		glVertex3f(rainX, -0.5, 0);
-		glEnd();
-		rainX += 0.1;
-	}
-
-	rainX = -6;
-
-	for (int i = 0; i < 100; i++)
-	{
-		glBegin(GL_LINES);
-		glColor3f(1, 1, 1);
-		glVertex3f(rainX, -0.7, 0);
-		glVertex3f(rainX, -0.8, 0);
-		glEnd();
-		rainX += 0.1;
-	}
-
-	rainX = -6;
-
-	for (int i = 0; i < 100; i++)
-	{
-		glBegin(GL_LINES);
-		glColor3f(1, 1, 1);
-		glVertex3f(rainX, -1, 0);
-		glVertex3f(rainX, -1.1, 0);
-		glEnd();
-		rainX += 0.1;
-	}
-
-	rainX = -6;
-
-	for (int i = 0; i < 100; i++)
-	{
-		glBegin(GL_LINES);
-		glColor3f(1, 1, 1);
-		glVertex3f(rainX, -1.3, 0);
-		glVertex3f(rainX, -1.4, 0);
-		glEnd();
-		rainX += 0.1;
-	}
-
-	rainX = -6;
-
-	for (int i = 0; i < 100; i++)
-	{
-		glBegin(GL_LINES);
-		glColor3f(1, 1, 1);
-		glVertex3f(rainX, -1.6, 0);
-		glVertex3f(rainX, -1.7, 0);
-		glEnd();
-		rainX += 0.1;
-	}
-
-	rainX = -6;
-
-	for (int i = 0; i < 100; i++)
-	{
-		glBegin(GL_LINES);
-		glColor3f(1, 1, 1);
-		glVertex3f(rainX, -1.9, 0);
-		glVertex3f(rainX, -2, 0);
-		glEnd();
-		rainX += 0.1;
-	}
-
-	rainX = -6;
-
-	for (int i = 0; i < 100; i++)
-	{
-		glBegin(GL_LINES);
-		glColor3f(1, 1, 1);
-		glVertex3f(rainX, 0.1, 0);
-		glVertex3f(rainX, 0.2, 0);
-		glEnd();
-		rainX += 0.1;
-	}
-
-	rainX = -6;
-
-	for (int i = 0; i < 100; i++)
-	{
-		glBegin(GL_LINES);
-		glColor3f(1, 1, 1);
-		glVertex3f(rainX, 0.4, 0);
-		glVertex3f(rainX, 0.5, 0);
-		glEnd();
-		rainX += 0.1;
-	}
-
-	rainX = -6;
-
-	for (int i = 0; i < 100; i++)
-	{
-		glBegin(GL_LINES);
-		glColor3f(1, 1, 1);
-		glVertex3f(rainX, 0.7, 0);
-		glVertex3f(rainX, 0.8, 0);
-		glEnd();
-		rainX += 0.1;
-	}
-
-	rainX = -6;
-
-	for (int i = 0; i < 100; i++)
-	{
-		glBegin(GL_LINES);
-		glColor3f(1, 1, 1);
-		glVertex3f(rainX, 1, 0);
-		glVertex3f(rainX, 1.1, 0);
-		glEnd();
-		rainX += 0.1;
-	}
-
-	rainX = -6;
-
-	for (int i = 0; i < 100; i++)
-	{
-		glBegin(GL_LINES);
-		glColor3f(1, 1, 1);
-		glVertex3f(rainX, 1.3, 0);
-		glVertex3f(rainX, 1.4, 0);
-		glEnd();
-		rainX += 0.1;
-	}
-
-	rainX = -6;
-
-	for (int i = 0; i < 100; i++)
-	{
-		glBegin(GL_LINES);
-		glColor3f(1, 1, 1);
-		glVertex3f(rainX, 1.6, 0);
-		glVertex3f(rainX, 1.7, 0);
-		glEnd();
-		rainX += 0.1;
-	}
-
-	rainX = -6;
-
-	for (int i = 0; i < 100; i++)
-	{
-		glBegin(GL_LINES);
-		glColor3f(1, 1, 1);
-		glVertex3f(rainX, 1.9, 0);
-		glVertex3f(rainX, 2, 0);
-		glEnd();
-		rainX += 0.1;
-	}
-
-	rainX = -6;
 }
 
 void update(int value)
@@ -595,6 +425,7 @@ void pavement()
 }
 
 void fence() {
+
 	glBegin(GL_QUADS);
 	glColor3f(0.941, 0.973, 1.000);
 
@@ -606,79 +437,8 @@ void fence() {
 	glEnd();
 	glColor3f(0, 0, 0);
 	drawstring(-290, -120, 0.0, "Ritson Campus");
-	//shadow
-	glBegin(GL_QUADS);
-	glColor3f(1, 1, 1);
-
-	glVertex2d(-300, -70);
-
-	glVertex2d(-300, -80);
-	glVertex2d(-200, -80);
-	glVertex2d(-200, -70);
-	glEnd();
-
-	glBegin(GL_LINES);
-	glColor3f(0, 0, 0);
-	glVertex2d(-300, -80);
-	glVertex2d(-300, -80);
-	glEnd();
-	glBegin(GL_LINE);
-	glColor3f(0, 0, 0);
-	glVertex2d(-200, -80);
-	glVertex2d(-200, -70);
-	glEnd();
-
-	glBegin(GL_QUADS);
-	glColor3f(0.941, 0.973, 1.000);
-
-	glVertex2d(-200, -80);
-	glVertex2d(-200, -150);
-	glVertex2d(-150, -110);
-	glVertex2d(-150, -40);
-
-	glEnd();
-
-	//shadow
-	glBegin(GL_QUADS);
-	glColor3f(1, 1, 1);
-
-	glVertex2d(-200, -70);
-	glVertex2d(-200, -80);
-	glVertex2d(-150, -40);
-	glVertex2d(-163, -40);
-	glEnd();
-	// small wall
-	glBegin(GL_POLYGON);
-	glColor3f(0.941, 0.973, 1.000);
-
-	glVertex2d(-150, -75);
-	glVertex2d(-150, -110);
-	glVertex2d(-125, -110);
-	glVertex2d(-125, -75);
-
-	glEnd();
-
-	glBegin(GL_POLYGON);
-	glColor3f(0.941, 0.973, 1.000);
-
-	glVertex2d(-125, -40);
-	glVertex2d(-125, -110);
-	glVertex2d(-110, -110);
-	glVertex2d(-110, -40);
-
-	glEnd();
-
-	for (int i = -150; i < -125; i = i + 5)
-	{
-
-		glBegin(GL_LINES);
 
 
-		glColor3f(0, 0, 0);
-		glVertex2d(i, -75);
-		glVertex2d(i, -40);
-		glEnd();
-	}
 	glBegin(GL_LINE);
 	glColor3f(0, 0, 0);
 	glVertex2d(-20, -40);
@@ -706,17 +466,7 @@ void fence() {
 	glVertex2d(60, -75);
 
 	glEnd();
-	for (int i = 35; i < 60; i = i + 5)
-	{
 
-		glBegin(GL_LINES);
-
-
-		glColor3f(0, 0, 0);
-		glVertex2d(i, -75);
-		glVertex2d(i, -40);
-		glEnd();
-	}
 	glBegin(GL_QUADS);
 	glColor3f(0.941, 0.973, 1.000);
 
@@ -728,11 +478,11 @@ void fence() {
 	//shadow
 	glBegin(GL_QUADS);
 	glColor3f(1, 1, 1);
-
+	glVertex2d(60, -40);
+	glVertex2d(70, -40);
 	glVertex2d(100, -70);
 	glVertex2d(100, -80);
-	glVertex2d(60, -40);
-	glVertex2d(60, -40);
+
 	glEnd();
 
 
@@ -757,6 +507,45 @@ void fence() {
 }
 //Stairs
 void steps() {
+	glColor3f(0.941, 0.973, 1.000);
+	rectangle(-150, -75, -125, -110);
+
+	glColor3f(0.941, 0.973, 1.000);
+	rectangle(-125, -40, -110, -110);
+
+	glBegin(GL_QUADS);
+	glColor3f(0.941, 0.973, 1.000);
+
+	glVertex2d(-200, -80);
+	glVertex2d(-200, -150);
+	glVertex2d(-150, -110);
+	glVertex2d(-150, -40);
+
+	glEnd();
+
+	//shadow
+	glBegin(GL_QUADS);
+	glColor3f(1, 1, 1);
+
+	glVertex2d(-200, -70);
+	glVertex2d(-200, -80);
+	glVertex2d(-150, -40);
+	glVertex2d(-163, -40);
+	glEnd();
+
+	//shadow
+	glBegin(GL_QUADS);
+	glColor3f(1, 1, 1);
+
+	glVertex2d(-300, -70);
+
+	glVertex2d(-300, -80);
+	glVertex2d(-200, -80);
+	glVertex2d(-200, -70);
+	glEnd();
+
+
+
 	glBegin(GL_POLYGON);
 	glColor3f(0, 0, 0);
 	glVertex2d(-90, -60);
@@ -790,6 +579,28 @@ void steps() {
 	glEnd();
 }
 
+
+
+//First building on the left
+void hall()
+{
+	glColor3ub(buildingColor[0], buildingColor[1], buildingColor[2]);
+	rectangle(-240, 130, -160, -10);
+	//Door
+	glColor3f(0, 0, 0);
+	rectangle(-210, 30, -190, -10);
+
+	//Strip
+	glColor3f(0.824, 0.706, 0.549);
+	rectangle(-240, 100, -160, 90);
+	//Strip
+	glColor3f(0.824, 0.706, 0.549);
+	rectangle(-240, 80, -160, 70);
+
+	//Strip
+	glColor3f(0.824, 0.706, 0.549);
+	rectangle(-240, 60, -160, 50);
+}
 //building in the middle 
 void building() {
 	glBegin(GL_POLYGON);
@@ -836,28 +647,6 @@ void building() {
 	glColor3ub(windowColor[0], windowColor[1], windowColor[2]);
 	rectangle(40, 50, 20, 15);
 }
-
-//First building on the left
-void hall()
-{
-	glColor3ub(buildingColor[0], buildingColor[1], buildingColor[2]);
-	rectangle(-240, 130, -160, -10);
-	//Door
-	glColor3f(0, 0, 0);
-	rectangle(-210, 30, -190, -10);
-
-	//Strip
-	glColor3f(0.824, 0.706, 0.549);
-	rectangle(-240, 100, -160, 90);
-	//Strip
-	glColor3f(0.824, 0.706, 0.549);
-	rectangle(-240, 80, -160, 70);
-
-	//Strip
-	glColor3f(0.824, 0.706, 0.549);
-	rectangle(-240, 60, -160, 50);
-}
-
 //last building on the right
 void lectureRoom()
 {
@@ -919,9 +708,28 @@ void lectureRoom()
 	rectangle(255, -15, 275, -42);
 }
 
-//The gate function
+//function for the gate
 void gate() {
+	//bars on the left
+	for (int i = -150; i < -125; i = i + 6)
+	{
+		glLineWidth(3);
+		glBegin(GL_LINES);
+		glColor3f(0, 0, 0);
+		glVertex2d(i, -75);
+		glVertex2d(i, -40);
+		glEnd();
+	}
+	//bars on left
+	for (int i = 35; i < 60; i = i + 6)
+	{
 
+		glBegin(GL_LINES);
+		glColor3f(0, 0, 0);
+		glVertex2d(i, -75);
+		glVertex2d(i, -40);
+		glEnd();
+	}
 	glBegin(GL_POLYGON);
 	glColor3f(0.863, 0.078, 0.235);
 	//2nd Quad
@@ -935,17 +743,16 @@ void gate() {
 
 	glEnd();
 
-	//Second gate
-	glLineWidth(3);
-	glBegin(GL_LINE_STRIP);
+
+	//Main gate
+	glLineWidth(4);
+	glBegin(GL_LINE_LOOP);
 	glColor3f(0, 0, 0);
 	glVertex2d(-50, -110);
 	glVertex2d(-50, -40);
 	glVertex2d(20, -40);
 	glVertex2d(20, -110);
-	//
-
-	//glEnd();
+	glEnd();
 	for (int i = -50; i < 20; i = i + 6)
 	{
 
@@ -961,6 +768,7 @@ void gate() {
 }
 void road()
 {
+
 	//Road Area
 	//glColor3f(0.3, 0.3, 0.3);
 	glColor3ub(30, 40, 50);
@@ -1016,7 +824,7 @@ void road()
 
 }
 
-// Bus functions
+// functions for the bus
 void busmake()
 {
 	glColor3f(0.9, 0.72, 0.0);
@@ -1098,206 +906,6 @@ void wheel(float k, float m, float rad)
 	glEnd();
 }
 
-void drawNewCar() {
-
-	wheel(.1, -.52, .1655);
-	wheel(-.4, -.52, 0.165);
-	// wheel(-8.5,-1.7,0.2);
-
-
-	//if (nightLight == true) {
-	//    //headlight
-	//    glBegin(GL_POLYGON);
-	//    glColor3ub(192, 192, 192);
-	//    glVertex2f(.3f, -0.45f);
-	//    glVertex2f(.8f, -.6f);
-	//    glVertex2f(.8f, -0.1f);
-	//    glVertex2f(.3f, -0.3f);
-
-	//    glEnd();
-	//}
-	glBegin(GL_QUADS);
-	{
-		glColor3f(1.0f, 0.0f, 0.0f); //red
-		glVertex2f(0.3f, -.2f);
-		glVertex2f(0.3f, -0.5f);
-		glVertex2f(-0.6f, -0.5f);
-		glVertex2f(-0.6f, -.2f);
-		glEnd();
-	}
-	glBegin(GL_LINE_LOOP);
-	{
-		glColor3f(0.0f, 0.0f, 0.0f); ///black border around glasses
-		glVertex2f(0.0f, 0.02f);
-		glVertex2f(-0.35f, 0.02f);
-		glVertex2f(-0.35f, -0.2f);
-		glVertex2f(0.0f, -0.2f);
-		glEnd();
-	}
-	glBegin(GL_LINE_LOOP);
-	{
-		glColor3f(0.0f, 0.0f, 0.0f); ///black border around glasses
-		glVertex2f(0.15f, -0.2f);
-		glVertex2f(0.0f, 0.02f);
-		glVertex2f(-0.35f, 0.02f);
-		glVertex2f(-0.45f, -0.2f);
-		glEnd();
-	}
-	glBegin(GL_QUADS);
-	{
-		glColor3f(0.6f, 0.8f, 1.0f); ///blue glass    (1/255)*X  {if its 153 then (1/255)*153}
-		glVertex2f(0.15f, -0.2f);
-		glVertex2f(0.0f, 0.02f);
-		glVertex2f(-0.35f, 0.02f);
-		glVertex2f(-0.45f, -0.2f);
-		glEnd();
-	}
-	glLineWidth(1.2);
-
-
-
-
-}
-void drawNewCarEx() {
-
-	wheel(.1, -.52, .1655);
-	wheel(-.4, -.52, 0.165);
-	// wheel(-8.5,-1.7,0.2);
-	//headlight
-	if (night == true) {
-
-		glBegin(GL_POLYGON);
-
-		glColor3ub(192, 192, 192);
-		glVertex2f(-0.6f, -0.4f);
-		glVertex2f(-0.6f, -.3f);
-		glVertex2f(-1.1f, -.1f);
-		glVertex2f(-1.1f, -.6f);
-
-		glEnd();
-	}
-
-	glBegin(GL_QUADS);
-	{
-		glColor3f(1.0f, 0.0f, 0.0f); //red
-		glVertex2f(0.3f, -.2f);
-		glVertex2f(0.3f, -0.5f);
-		glVertex2f(-0.6f, -0.5f);
-		glVertex2f(-0.6f, -.2f);
-		glEnd();
-	}
-	glBegin(GL_LINE_LOOP);
-	{
-		glColor3f(0.0f, 0.0f, 0.0f); ///black border around glasses
-		glVertex2f(0.0f, 0.02f);
-		glVertex2f(-0.35f, 0.02f);
-		glVertex2f(-0.35f, -0.2f);
-		glVertex2f(0.0f, -0.2f);
-		glEnd();
-	}
-	glBegin(GL_LINE_LOOP);
-	{
-		glColor3f(0.0f, 0.0f, 0.0f); ///black border around glasses
-		glVertex2f(0.15f, -0.2f);
-		glVertex2f(0.0f, 0.02f);
-		glVertex2f(-0.35f, 0.02f);
-		glVertex2f(-0.45f, -0.2f);
-		glEnd();
-	}
-	glBegin(GL_QUADS);
-	{
-		glColor3f(0.6f, 0.8f, 1.0f); ///blue glass    (1/255)*X  {if its 153 then (1/255)*153}
-		glVertex2f(0.15f, -0.2f);
-		glVertex2f(0.0f, 0.02f);
-		glVertex2f(-0.35f, 0.02f);
-		glVertex2f(-0.45f, -0.2f);
-		glEnd();
-	}
-	glLineWidth(1.2);
-
-	glBegin(GL_QUADS);
-	{
-		glColor3f(0.6f, 0.8f, 1.0f); ///blue glass    (1/255)*X  {if its 153 then (1/255)*153}
-		glVertex2f(0.15f, -0.2f);
-		glVertex2f(0.0f, 0.02f);
-		glVertex2f(-0.35f, 0.02f);
-		glVertex2f(-0.45f, -0.2f);
-		glEnd();
-	}
-}
-void lamppost()
-{
-
-	//post
-	glColor3ub(170, 170, 220);
-	double len = 150;
-	double thick = 10;
-	glPushMatrix();
-	glTranslatef(-150, -50, 70.0);
-	glScalef(thick, len, thick);
-	glutSolidCube(1.0);
-	glPopMatrix();
-	//lantern  right
-	glColor3ub(170, 170, 220);
-	glPushMatrix();
-	glLoadIdentity();
-	glTranslatef(-110, -10, 0);
-	glutSolidCone(22, 22, 3, 2);
-	glPopMatrix();
-
-	//bar right
-
-	glColor3ub(155, 155, 205);
-	double len0 = 60;
-	double thick0 = 5;
-	glPushMatrix();
-	glLoadIdentity();
-	glTranslatef(-120, 10, 0);
-	glScalef(len0, thick0, len0);
-	glutSolidCube(1.0);
-	glPopMatrix();
-	//bar left
-
-	glColor3ub(155, 155, 205);
-	double len1 = 60;
-	double thick1 = 5;
-	glPushMatrix();
-	glLoadIdentity();
-	glTranslatef(-180, 10, 70);
-	glScalef(len1, thick1, len1);
-	glutSolidCube(1.0);
-	glPopMatrix();
-
-	//lantern left
-	glColor3ub(170, 170, 220);
-	glPushMatrix();
-	glLoadIdentity();
-	glTranslatef(-190, -10, 0);
-	glutSolidCone(22, 22, 3, 2);
-	glPopMatrix();
-
-	//bulb right
-
-
-
-	glColor3f(100, 100, 0.0);
-	glPushMatrix();
-	glLoadIdentity();
-	glTranslatef(-110, -20, 70);
-	glutSolidSphere(5, 20, 20);
-	glPopMatrix();
-	//bulb left
-	glColor3f(100, 100, 0.0);
-
-	glPushMatrix();
-	glLoadIdentity();
-	glTranslatef(-190, -20, 0);
-	glutSolidSphere(5, 20, 20);
-	glPopMatrix();
-
-
-}
-
 //Callback function
 void dayMode()
 {
@@ -1321,97 +929,18 @@ void dayMode()
 	steps();
 	gate();
 	fence();
-	lamppost();
+	//lamppost();
 	pavement();
 	road();
 
 	bus();
 	//Display frame buffer
+	glFlush();
 	glutSwapBuffers();
-	//glFlush();
-
-	//car 1 display
-	//car 0
-	glPushMatrix();
-	glTranslatef(-carex, 1, 0);
-	glTranslatef(4, -1.45, 1);
-	glScalef(.8, .4, 0.2);
-	drawNewCarEx();
-	glPopMatrix();
-
-	glPushMatrix();
-	glTranslatef(-carex, 1, 0);
-	glTranslatef(8, -1.3, 1);
-	glScalef(.8, .4, 0.2);
-	drawNewCarEx();
-	glPopMatrix();
-
-	glPushMatrix();
-	glTranslatef(-carex, 1, 0);
-	glTranslatef(13, -1.3, 1);
-	glScalef(.8, .4, 0.2);
-	drawNewCarEx();
-	glPopMatrix();
-
-	//car 1 display
-	glPushMatrix();
-	glTranslatef(car1, 0, 0);
-	glTranslatef(-4.5, 0.2, 1);
-	glScalef(0.15, 0.15, 1);
-	drawNewCar();
-	glPopMatrix();
-
 
 }
 
-void carAnimation1(int value)
-{
 
-	double z = setUpSpeed(0.03f);
-	car1 += z;
-	//car1 += 0.03f;
-	if (car1 > 15.0f)
-	{
-		car1 = -5.0f;
-	}
-
-	glutPostRedisplay();
-
-	glutTimerFunc(25, carAnimation1, 0);
-}
-
-//void carAnimation(int value)
-//{
-//
-//	double z = setUpSpeed(0.03f);
-//	car1 += z;
-//	//car1 += 0.03f;
-//	if (car1 > 19.0f)
-//	{
-//		car1 = -5.0f;
-//	}
-//
-//	glutPostRedisplay();
-//
-//	glutTimerFunc(25, carAnimation1, 0);
-//}
-
-
-void carAnimationex(int value)
-{
-
-	double z = setUpSpeed(0.03f);
-	carex += z;
-	//car1 += 0.03f;
-	if (carex > 19.0f)
-	{
-		carex = -5.0f;
-	}
-
-	glutPostRedisplay();
-
-	glutTimerFunc(25, carAnimationex, 0);
-}
 //changes windows size
 //Viewport initialization
 void reshape(int w, int h)
@@ -1493,6 +1022,10 @@ void my_keyboard(unsigned char key, int x, int y)
 			windowColor[0] = 237;
 			windowColor[1] = 237;
 			windowColor[2] = 187;
+
+			bulbColor[0] = 219;
+			bulbColor[1] = 230;
+			bulbColor[2] = 21;
 			star(5, 97, 0.4, 0.8);
 			star(10, 66, 0.4, 0.8);
 			star(25, 90, 0.4, 0.8);
@@ -1519,6 +1052,9 @@ void my_keyboard(unsigned char key, int x, int y)
 			sunlight[0] = 219;
 			sunlight[1] = 230;
 			sunlight[2] = 21;
+			bulbColor[0] = 255;
+			bulbColor[1] = 255;
+			bulbColor[2] = 255;
 			buildingColor[0] = 147;
 			buildingColor[1] = 112;
 			buildingColor[2] = 219;
@@ -1603,8 +1139,6 @@ int main(int argc, char** argv) {
 	glutInitWindowSize(1000, 650);
 	// screen coordinates in pixels
 	glutInitWindowPosition(0, 0);
-	glutTimerFunc(25, carAnimation1, 0); //Add a timer
-	glutTimerFunc(25, carAnimationex, 0);
 
 	//Creates the window
 	glutCreateWindow("OpenGL mini Project: Group 8");
