@@ -15,19 +15,19 @@
 
 ### First Frame 
 ---
-![First Frame](images/1.png)
+![First Frame](1.png)
 <br>
 ### Second Frame
 ---
-![Second Frame](images/2.png)
+![Second Frame](2.png)
 <br>
 ### Third Frame
 ---
-![Third Frame](images/3.png)
+![Third Frame](3.png)
 
 <br>
 
 ### Fourth Frame
 
 ---
-![Fourth Frame](images/4.png)
+![Fourth Frame](4.png)
